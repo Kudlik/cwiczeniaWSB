@@ -1,107 +1,215 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20170422 11:09:27.539" generator="Robot 3.0 (Python 2.7.5 on linux2)">
+<robot generated="20170422 14:17:53.096" generator="Robot 3.0 (Python 2.7.5 on linux2)">
 <suite source="/home/tester/cwiczeniaWSB/robotlogujacysiedowp.robot" id="s1" name="Robotlogujacysiedowp">
-<test id="s1-t1" name="logowanie na pocztę wp">
+<test id="s1-t1" name="logowanie na poczte">
+<kw name="dane do logowania">
+<arguments>
+<arg>${USER}</arg>
+<arg>${PSWD}</arg>
+</arguments>
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
 <arg>${EMPTY}</arg>
 <arg>ff</arg>
 </arguments>
-<msg timestamp="20170422 11:09:27.642" level="INFO">Opening browser 'ff' to base url ''</msg>
-<status status="PASS" endtime="20170422 11:09:31.313" starttime="20170422 11:09:27.642"></status>
+<msg timestamp="20170422 14:17:53.201" level="INFO">Opening browser 'ff' to base url ''</msg>
+<status status="PASS" endtime="20170422 14:17:56.605" starttime="20170422 14:17:53.201"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
-<arg>https://www.wp.pl</arg>
+<arg>https://www.gmail.com</arg>
 </arguments>
-<msg timestamp="20170422 11:09:31.314" level="INFO">Opening url 'https://www.wp.pl'</msg>
-<status status="PASS" endtime="20170422 11:09:43.403" starttime="20170422 11:09:31.314"></status>
+<msg timestamp="20170422 14:17:56.605" level="INFO">Opening url 'https://www.gmail.com'</msg>
+<status status="PASS" endtime="20170422 14:17:58.247" starttime="20170422 14:17:56.605"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=.//*[@id='header']/header/div[1]/div/ul/li[1]/a</arg>
+<arg>id=Email</arg>
 </arguments>
-<msg timestamp="20170422 11:09:43.404" level="INFO">Clicking element 'xpath=.//*[@id='header']/header/div[1]/div/ul/li[1]/a'.</msg>
-<status status="PASS" endtime="20170422 11:09:44.331" starttime="20170422 11:09:43.403"></status>
+<msg timestamp="20170422 14:17:58.248" level="INFO">Clicking element 'id=Email'.</msg>
+<status status="PASS" endtime="20170422 14:17:58.633" starttime="20170422 14:17:58.247"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>id=login</arg>
-<arg>${loginwp}</arg>
+<arg>id=Email</arg>
+<arg>${nazwa_maila}</arg>
 </arguments>
-<msg timestamp="20170422 11:09:44.331" level="INFO">Typing text 'testerwsb_t1' into text field 'id=login'</msg>
-<status status="PASS" endtime="20170422 11:09:46.734" starttime="20170422 11:09:44.331"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>id=password</arg>
-<arg>${passwordwp}\n</arg>
-</arguments>
-<msg timestamp="20170422 11:09:46.735" level="INFO">Typing text 'adam1234
-' into text field 'id=password'</msg>
-<status status="PASS" endtime="20170422 11:09:46.905" starttime="20170422 11:09:46.735"></status>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
-<arguments>
-<arg>5</arg>
-</arguments>
-<msg timestamp="20170422 11:09:51.907" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20170422 11:09:51.907" starttime="20170422 11:09:46.905"></status>
+<msg timestamp="20170422 14:17:58.633" level="INFO">Typing text '['tomasz.rosenberg']' into text field 'id=Email'</msg>
+<status status="PASS" endtime="20170422 14:17:58.818" starttime="20170422 14:17:58.633"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>xpath=.//*[@id='bxPanelTopBody']/div/div[1]/a[2]</arg>
+<arg>id=next</arg>
 </arguments>
-<msg timestamp="20170422 11:09:51.909" level="INFO">Clicking element 'xpath=.//*[@id='bxPanelTopBody']/div/div[1]/a[2]'.</msg>
-<status status="PASS" endtime="20170422 11:09:52.651" starttime="20170422 11:09:51.908"></status>
+<msg timestamp="20170422 14:17:58.819" level="INFO">Clicking element 'id=next'.</msg>
+<status status="PASS" endtime="20170422 14:17:59.053" starttime="20170422 14:17:58.818"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
 <arguments>
-<arg>10</arg>
+<arg>id=Passwd</arg>
 </arguments>
-<msg timestamp="20170422 11:10:02.658" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" endtime="20170422 11:10:02.658" starttime="20170422 11:09:52.652"></status>
+<status status="PASS" endtime="20170422 14:17:59.767" starttime="20170422 14:17:59.053"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=Passwd</arg>
+</arguments>
+<msg timestamp="20170422 14:17:59.768" level="INFO">Clicking element 'id=Passwd'.</msg>
+<status status="PASS" endtime="20170422 14:17:59.897" starttime="20170422 14:17:59.767"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>textarea class=textareaInput wideInput</arg>
-<arg>testerwsb_t1@wp.pl</arg>
+<arg>id=Passwd</arg>
+<arg>${haslo}</arg>
 </arguments>
-<msg timestamp="20170422 11:10:02.659" level="INFO">Typing text 'testerwsb_t1@wp.pl' into text field 'textarea class=textareaInput wideInput'</msg>
+<msg timestamp="20170422 14:17:59.898" level="INFO">Typing text '['qazwsxedcr']' into text field 'id=Passwd'</msg>
+<status status="PASS" endtime="20170422 14:18:00.206" starttime="20170422 14:17:59.897"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=signIn</arg>
+</arguments>
+<msg timestamp="20170422 14:18:00.207" level="INFO">Clicking element 'id=signIn'.</msg>
+<status status="PASS" endtime="20170422 14:18:00.936" starttime="20170422 14:18:00.206"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is enabled.</doc>
+<arguments>
+<arg>xpath=//div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/div/div</arg>
+</arguments>
+<status status="PASS" endtime="20170422 14:18:05.960" starttime="20170422 14:18:00.936"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:18:05.961" starttime="20170422 14:17:53.200"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:18:05.961" critical="yes" starttime="20170422 14:17:53.200"></status>
+</test>
+<test id="s1-t2" name="wyslanie wiadomosci">
+<kw name="dane do wysylki">
+<arguments>
+<arg>${RECIPIENT}</arg>
+<arg>${TITLE}</arg>
+<arg>${CONTENT}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/div/div</arg>
+</arguments>
+<msg timestamp="20170422 14:18:05.963" level="INFO">Clicking element 'xpath=//div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/div/div'.</msg>
+<status status="PASS" endtime="20170422 14:18:10.196" starttime="20170422 14:18:05.963"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>name=to</arg>
+<arg>${odbiorca}</arg>
+</arguments>
+<msg timestamp="20170422 14:18:10.197" level="INFO">Typing text '['tomasz.rosenberg@gmail.com']' into text field 'name=to'</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20170422 11:10:02.666" level="FAIL">error: [Errno 111] Connection refused</msg>
-<status status="FAIL" endtime="20170422 11:10:02.666" starttime="20170422 11:10:02.659"></status>
+<msg timestamp="20170422 14:18:12.699" level="FAIL">NoSuchWindowException: Message: Window not found. The browser window may have been closed.
+Stacktrace:
+    at nsCommandProcessor.prototype.execute (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+    at Dispatcher.executeAs/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+    at Resource.prototype.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+    at Dispatcher.prototype.dispatch (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+    at WebDriverServer/&lt;.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+    at createHandlerFunc/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+    at ServerHandler.prototype.handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+    at Connection.prototype.process (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+    at RequestReader.prototype._handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+    at RequestReader.prototype._processBody (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+    at RequestReader.prototype.onInputStreamReady (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1393)</msg>
+<status status="FAIL" endtime="20170422 14:18:12.699" starttime="20170422 14:18:12.544"></status>
 </kw>
-<msg timestamp="20170422 11:10:02.666" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 111] Connection refused</msg>
-<msg timestamp="20170422 11:10:02.730" level="FAIL">ValueError: Element locator with prefix 'textarea class' is not supported</msg>
-<status status="FAIL" endtime="20170422 11:10:02.731" starttime="20170422 11:10:02.659"></status>
+<msg timestamp="20170422 14:18:12.699" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Window not found. The browser window may have been closed.
+Stacktrace:
+    at nsCommandProcessor.prototype.execute (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+    at Dispatcher.executeAs/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+    at Resource.prototype.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+    at Dispatcher.prototype.dispatch (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+    at WebDriverServer/&lt;.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+    at createHandlerFunc/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+    at ServerHandler.prototype.handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+    at Connection.prototype.process (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+    at RequestReader.prototype._handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+    at RequestReader.prototype._processBody (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+    at RequestReader.prototype.onInputStreamReady (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1393)</msg>
+<msg timestamp="20170422 14:18:12.724" level="FAIL">NoSuchWindowException: Message: Window not found. The browser window may have been closed.
+Stacktrace:
+    at nsCommandProcessor.prototype.execute (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+    at Dispatcher.executeAs/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+    at Resource.prototype.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+    at Dispatcher.prototype.dispatch (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+    at WebDriverServer/&lt;.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+    at createHandlerFunc/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+    at ServerHandler.prototype.handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+    at Connection.prototype.process (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+    at RequestReader.prototype._handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+    at RequestReader.prototype._processBody (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+    at RequestReader.prototype.onInputStreamReady (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+    at Spinner.prototype.observe (resource://gre/modules/AsyncShutdown.jsm:529)</msg>
+<status status="FAIL" endtime="20170422 14:18:12.724" starttime="20170422 14:18:10.197"></status>
 </kw>
-<status status="FAIL" endtime="20170422 11:10:02.731" critical="yes" starttime="20170422 11:09:27.641">ValueError: Element locator with prefix 'textarea class' is not supported</status>
+<status status="FAIL" endtime="20170422 14:18:12.724" starttime="20170422 14:18:05.962"></status>
+</kw>
+<status status="FAIL" endtime="20170422 14:18:12.724" critical="yes" starttime="20170422 14:18:05.962">NoSuchWindowException: Message: Window not found. The browser window may have been closed.
+Stacktrace:
+    at nsCommandProcessor.prototype.execute (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+    at Dispatcher.executeAs/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+    at Resource.prototype.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+    at Dispatcher.prototype.dispatch (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+    at WebDriverServer/&lt;.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+    at createHandlerFunc/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+    at ServerHandler.prototype.handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+    at Connection.prototype.process (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+    at RequestReader.prototype._handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+    at RequestReader.prototype._processBody (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+    at RequestReader.prototype.onInputStreamReady (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1393)
+    at Spinner.prototype.observe (resource://gre/modules/AsyncShutdown.jsm:529)</status>
 </test>
-<status status="FAIL" endtime="20170422 11:10:02.732" starttime="20170422 11:09:27.540"></status>
+<test id="s1-t3" name="koniec">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170422 14:18:12.853" starttime="20170422 14:18:12.726"></status>
+</kw>
+<status status="PASS" endtime="20170422 14:18:12.853" critical="yes" starttime="20170422 14:18:12.725"></status>
+</test>
+<status status="FAIL" endtime="20170422 14:18:12.854" starttime="20170422 14:17:53.097"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Robotlogujacysiedowp" pass="0">Robotlogujacysiedowp</stat>
+<stat fail="1" id="s1" name="Robotlogujacysiedowp" pass="2">Robotlogujacysiedowp</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20170422 11:10:02.666" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: error: [Errno 111] Connection refused</msg>
+<msg timestamp="20170422 14:18:12.699" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Window not found. The browser window may have been closed.
+Stacktrace:
+    at nsCommandProcessor.prototype.execute (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/command-processor.js:12719)
+    at Dispatcher.executeAs/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9558)
+    at Resource.prototype.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9705)
+    at Dispatcher.prototype.dispatch (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:9652)
+    at WebDriverServer/&lt;.handle (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/driver-component.js:12517)
+    at createHandlerFunc/&lt; (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2054)
+    at ServerHandler.prototype.handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:2387)
+    at Connection.prototype.process (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1223)
+    at RequestReader.prototype._handleResponse (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1677)
+    at RequestReader.prototype._processBody (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1525)
+    at RequestReader.prototype.onInputStreamReady (file:///tmp/tmprgnYKe/webdriver-py-profilecopy/extensions/fxdriver@googlecode.com/components/httpd.js:1393)</msg>
 </errors>
 </robot>
